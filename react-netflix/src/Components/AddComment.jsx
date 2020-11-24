@@ -59,12 +59,12 @@ class AddComment extends React.Component {
 
   render() {
     return (
-      <Container id="AddComment" className="px-0">
-        <h5>Add Comment:</h5>
+      <Container id="AddComment">
         <Form onSubmit={this.submitComment}>
           <Row>
-            <Col xs={6}>
-              <Form.Group>
+            <Col xs={12} className="d-flex align-items-start justify-content-start">
+              <Form.Group className="w-50 d-inline-block mr-4">
+                <Form.Label className="mb-2">Add Comment:</Form.Label>
                 <Form.Control
                   as="textarea"
                   name="comment"
@@ -75,10 +75,10 @@ class AddComment extends React.Component {
                   required
                 />
               </Form.Group>
-              <Form.Group className="w-100">
+              <Form.Group className="w-25 d-inline-block">
                 <Form.Label htmlFor="rate">Rating:</Form.Label>
                 <Form.Control
-                  className="w-50"
+                  className="w-75 mb-3"
                   as="select"
                   name="rate"
                   id="rate"
@@ -92,11 +92,11 @@ class AddComment extends React.Component {
                   <option>4</option>
                   <option>5</option>
                 </Form.Control>
-                <Button type="sumbit" variant="success" value="Submit" className="mt-2">
-                  Submit
-                </Button>
               </Form.Group>
             </Col>
+            <Button type="sumbit" variant="danger" value="Submit" className="w-25 d-block ml-3 mt-2">
+              Submit
+            </Button>
           </Row>
         </Form>
       </Container>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, ListGroup } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import AddComment from "./AddComment";
 
 class DetailsPageComments extends React.Component {
@@ -30,22 +30,21 @@ class DetailsPageComments extends React.Component {
     const { movieID } = this.props;
     return (
       <div>
-        <Container id="commentArea">
-          <Row>
+        <Container id="commentArea" className="px-0">
+          <h4 className="mb-3">Comments</h4>
+          {this.state.comments.map((comment, index) => (
+            <div className="comment swing-in-top-fwd" key={index}>
+              <p className="d-inline-block mb-0">{comment.comment}</p> (
+              {Array.from({ length: comment.rate }).map((star, index) => (
+                <span key={index}>&#9734;</span>
+              ))}
+              )
+            </div>
+          ))}
+          <Row className="mt-5">
             <AddComment fetchComments={this.fetchComments} movieID={movieID} />
           </Row>
         </Container>
-
-        <h4 className="mb-3">Comments</h4>
-        {this.state.comments.map((comment, index) => (
-          <div className="comment swing-in-top-fwd" key={index}>
-            <p className="d-inline-block mb-0">{comment.comment}</p> (
-            {Array.from({ length: comment.rate }).map((star, index) => (
-              <span key={index}>&#9734;</span>
-            ))}
-            )
-          </div>
-        ))}
       </div>
     );
   }
