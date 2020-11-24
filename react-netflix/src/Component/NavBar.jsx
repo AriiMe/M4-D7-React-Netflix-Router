@@ -37,7 +37,12 @@ class NavBar extends React.Component {
               </div>
             </Link>
 
-            <Nav.Link style={{ color: "white" }}>TV Shows</Nav.Link>
+            <Link to="/tvshows/">
+              <div className="nav-link" style={{ color: "white" }}>
+                TV Shows
+              </div>
+            </Link>
+
             <Nav.Link style={{ color: "white" }}>Recently Added</Nav.Link>
           </Nav>
           <Form inline onMouseLeave={this.state.searchInput.length === 0 && this.toggleSearch}>

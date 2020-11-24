@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import MoviesContainer from "./Components/MoviesContainer";
 import DetailsContainer from "./Components/DetailsContainer";
+import TVShowsContainer from "./Components/TVShowsContainer";
 import Navbar from "./Component/NavBar";
 import Jumbotron from "./Component/Jumbotron";
 import Footer from "./Component/Footer";
@@ -19,6 +20,7 @@ class App extends React.Component {
           <Route path="/" exact component={Jumbotron} />
           <Route path="/" exact render={(props) => <MoviesContainer {...props} />} />
           <Route path="/details/:id" exact component={DetailsContainer} />
+          <Route path="/tvshows" exact component={TVShowsContainer} />
           <Route path="/" component={Footer} />
         </Router>
       </>
