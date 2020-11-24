@@ -1,0 +1,497 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #141414;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  color: #c2c2c2;
+}
+
+a:hover {
+  color: #f3f3f3;
+}
+
+/* Homepage Styling */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+  color: #fff;
+}
+
+p {
+  color: rgb(163, 163, 163);
+}
+
+.comment {
+  color: rgb(163, 163, 163);
+  padding: 10px 20px;
+  border-radius: 12px;
+  background-color: rgb(10, 10, 10);
+  margin: 14px 0px;
+}
+
+.shows-row {
+  overflow: scroll hidden;
+  white-space: nowrap;
+  padding: 6px 0px;
+  border-radius: 0.75rem !important;
+}
+
+.show-wrapper {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  height: 200px;
+  border-radius: 4px;
+}
+
+.show-wrapper-lg {
+  height: 100%;
+}
+
+.show-content {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(26, 26, 26);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.781) 64%,
+    rgba(0, 0, 0, 0.555) 82%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  transition: transform 0.35s ease, opacity 0.25s ease;
+}
+
+.show-content-lg {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(26, 26, 26);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.781) 64%,
+    rgba(0, 0, 0, 0.555) 82%,
+    rgba(0, 0, 0, 0) 100%
+  );
+
+  transition: transform 0.35s ease, opacity 0.25s ease;
+}
+
+.translateY {
+  transform: translateY(98px);
+}
+
+.translateY-lg {
+  transform: translateY(218px);
+}
+
+.show-content h5 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  width: 100%;
+}
+
+.show-content-lg .show-img {
+  width: 100%;
+  position: relative;
+}
+
+.img-shift {
+  top: -30%;
+}
+
+.show-wrapper:hover .show-content,
+.show-wrapper:hover .show-content-lg {
+  transform: translateY(0);
+}
+
+.show-wrapper:hover .show-content h5 {
+  white-space: break-spaces;
+  margin-bottom: 6px !important;
+}
+
+.show-img {
+  transform: scale(1);
+  transition: transform 0.25s ease-in-out;
+  position: relative;
+}
+
+.show-wrapper:hover .show-img {
+  transform: scale(1.05) !important;
+}
+
+.show-content p,
+.show-content-lg p {
+  color: rgb(148, 148, 148);
+  margin-bottom: 14px !important;
+  font-size: 0.8rem;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.show-content button,
+.show-content-lg button {
+  border: none;
+  border-radius: 4px;
+  background-color: #e01214;
+  color: #fff;
+  padding: 4px 10px;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  transition: background-color 0.25s ease;
+}
+
+.show-content button:hover,
+.show-content-lg button:hover {
+  background-color: #a80e10;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #141414;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(83, 83, 83);
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(163, 163, 163);
+}
+
+/*************************************************/
+
+/* Modal Styling */
+
+.modal-content {
+  background-color: #141414;
+  color: #fff;
+}
+
+.modal-header {
+  border: none;
+}
+
+.modal-footer {
+  border: none;
+}
+
+.list-group-item {
+  background-color: #141414;
+}
+/*************************************************/
+
+/* Search Styling */
+
+.search-container {
+  border-radius: 6px;
+  position: fixed;
+  top: 68px;
+  right: 172px;
+  z-index: 99;
+  width: 480px;
+  background-color: #141414e0;
+  max-height: 800px;
+  overflow: hidden scroll;
+}
+
+.search-container h6,
+.search-container span {
+  word-break: break-all;
+}
+
+.search-image {
+  background-size: cover !important;
+  background-position: center !important;
+  height: 100px;
+  width: 70px;
+}
+
+.search-item {
+  background-color: #0c0c0c48;
+  border-radius: 4px;
+  border-bottom: 3px solid #0c0c0c48;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out, border 0.15s ease-in-out;
+}
+
+.search-item:hover {
+  background-color: #ff56592d;
+  border-bottom: 3px solid #ff5659;
+}
+
+.search-item small {
+  color: #c2c2c28c;
+}
+
+/*************************************************/
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  z-index: 100 !important;
+  position: fixed;
+  background: #020102;
+  width: 100%;
+}
+
+.nav-link {
+  color: rgb(170, 170, 170);
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.wrapper section {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  margin: 20px 0;
+}
+.wrapper section .item {
+  padding: 0 2px;
+  transition: 250ms all;
+}
+.wrapper section .item:hover {
+  margin: 0 40px;
+  transform: scale(1.2);
+}
+.wrapper section a {
+  position: absolute;
+  color: #fff;
+  text-decoration: none;
+  font-size: 6em;
+  background: black;
+  width: 80px;
+  padding: 20px;
+  text-align: center;
+  z-index: 1;
+}
+.wrapper section a:nth-of-type(1) {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+.wrapper section a:nth-of-type(2) {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+
+.jumbotron {
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+  padding: 0px;
+}
+.jumbotron video {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /*  object-fit is not supported on IE  */
+  object-fit: cover;
+  opacity: 0.5;
+}
+.jumbotron .container {
+  z-index: 2;
+  position: relative;
+}
+
+.jumbotron::before {
+  content: "";
+  background: rgb(20, 20, 20);
+  background: linear-gradient(180deg, rgba(20, 20, 20, 0) 34%, rgba(20, 20, 20, 1) 100%);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.navbar input {
+  color: #fff !important;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#details-banner {
+  background-size: cover;
+  background-position: center 15%;
+  background-repeat: no-repeat;
+  height: 500px;
+  filter: blur(1rem);
+  width: calc(100% + 4%);
+  left: -2%;
+  position: relative;
+}
+
+.banner-wrap {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: rgb(20, 20, 20);
+  background: linear-gradient(180deg, rgba(20, 20, 20, 0) 34%, rgba(20, 20, 20, 1) 100%);
+}
+
+/* Additional task styling */
+
+.puff-in-center {
+  -webkit-animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+  animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2020-11-23 15:47:57
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation puff-in-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.swing-in-top-fwd {
+  -webkit-animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s both;
+  animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-11-24 14:44:34
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation swing-in-top-fwd
+ * ----------------------------------------
+ */
+@-webkit-keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+    transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    opacity: 1;
+  }
+}
+@keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+    transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    opacity: 1;
+  }
+}
